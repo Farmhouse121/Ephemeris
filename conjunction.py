@@ -76,6 +76,9 @@ by finding the Polaris, the pole star.""");
             (jupiter.az-pi if jupiter.az>pi else jupiter.az)*180e0/pi,
             "W" if jupiter.az>pi else "E" if jupiter.az<pi else "S"
         ))
+        
+    else:
+        print("Jupiter is not above the horizon.")
 
     # Jupiter
     saturn=Saturn(observer)
@@ -86,6 +89,9 @@ by finding the Polaris, the pole star.""");
             (saturn.az-pi if saturn.az>pi else saturn.az)*180e0/pi,
             "W" if saturn.az>pi else "E" if saturn.az<pi else "S"
         ))
+
+    else:
+        print("Saturn is not above the horizon.")
 
     # done
     print("Done.")
