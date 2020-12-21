@@ -54,10 +54,10 @@ by finding the Polaris, the pole star.""");
     
     sunset=utc.localize(datetime.strptime(str(observer.next_setting(sun)),"%Y/%m/%d %H:%M:%S")).astimezone(localtime) if observer.next_setting(sun)!=None else None
 
-    if sunset!=None:
-        print("The Sun will set at %s." % sunset.strftime("%H:%M:%S"))
-        
     if sunlight<=0e0:
+        if sunset!=None:
+            print("The Sun will set at %s." % sunset.strftime("%H:%M:%S"))
+        
         sunrise=utc.localize(datetime.strptime(str(observer.next_rising(sun)),"%Y/%m/%d %H:%M:%S")).astimezone(localtime) if observer.next_rising(sun)!=None else None
         print("The Sun will rise at %s." % sunrise.strftime("%H:%M:%S"))
 
