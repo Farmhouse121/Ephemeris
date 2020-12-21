@@ -1,0 +1,30 @@
+usage: conjunction.py [-h] [-x LONGITUDE] [-y LATITUDE] [-t TIMEZONE] [-e ELEVATION] [time] [date]
+
+positional arguments:
+  time                  Local time for calculation, default is current time, as HH:MM:SS.
+  date                  Local date for calculation, default is current date, as YYYY-MM-DD.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -x LONGITUDE, --longitude LONGITUDE
+                        East longitude of the observer in decimal degrees. West is negative.
+  -y LATITUDE, --latitude LATITUDE
+                        North latitude of the observer. South is negative.
+  -t TIMEZONE, --timezone TIMEZONE
+                        The local time-zone of the observer.
+  -e ELEVATION, --elevation ELEVATION
+                        Elevation in metres above sea level.
+
+This script will compute the local coordinates (altitude and azimuth) for Jupiter and Saturn for the given date. Altitude is degrees above the horizon and
+azimuth is degrees eastwards from North. Locate North by finding the Polaris, the pole star.
+
+$ python3 conjunction.py 16:40:00
+Calculation of the location of Jupiter and Saturn for an observer at 74.1515° W, 40.3735° N, 20.0000 m above sea level.
+
+Computed for local time 2020-12-21 16:40:00.
+The Sun has set.
+The Sun will rise at 07:16:27.
+The Moon is currently above the horizon, with light at 64.88 %.
+Jupiter is 19.20° above the horizon, 38.54° W.
+Saturn is 19.27° above the horizon, 38.63° W.
+Done.
