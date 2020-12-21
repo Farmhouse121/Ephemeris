@@ -75,7 +75,7 @@ by finding the Polaris, the pole star.""");
     if jupiter.alt>0e0:
         print("Jupiter is %.2f° above the horizon, %.2f° %s." % (
             jupiter.alt*180e0/pi,
-            (jupiter.az-pi if jupiter.az>pi else jupiter.az)*180e0/pi,
+            (2*pi-jupiter.az if jupiter.az>pi else jupiter.az)*180e0/pi,
             "W" if jupiter.az>pi else "E" if jupiter.az<pi else "S"
         ))
         
@@ -88,7 +88,7 @@ by finding the Polaris, the pole star.""");
     if saturn.alt>0e0:
         print("Saturn is %.2f° above the horizon, %.2f° %s." % (
             saturn.alt*180e0/pi,
-            (saturn.az-pi if saturn.az>pi else saturn.az)*180e0/pi,
+            (2*pi-saturn.az if saturn.az>pi else saturn.az)*180e0/pi,
             "W" if saturn.az>pi else "E" if saturn.az<pi else "S"
         ))
 
